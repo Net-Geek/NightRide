@@ -4,4 +4,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.nightride.app.ConfirmRide"
-    tools:ignore="MergeRootFrame" />
+    tools:ignore="MergeRootFrame" >
+
+    <ScrollView
+        android:id="@+id/confirm_gps_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/ConfirmGpsContainer"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ReferenceTV"
+                android:text="@string/ReferenceTV"
+                android:textSize="20sp"
+                android:layout_marginBottom="2dp" />
+
+            <View
+                android:id="@+id/SplitLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ff0000"
+                android:layout_marginBottom="10dp" />
+
+
+            <EditText
+                android:id="@+id/reference"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Reference"
+                android:textSize="20sp"
+                android:layout_marginBottom="25dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CommentsTV"
+                android:text="@string/CommentsTV"
+                android:textSize="20sp"
+                android:layout_marginBottom="2dp" />
+
+            <View
+                android:id="@+id/SplitLine2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ff0000"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/comments"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Comments"
+                android:textSize="20sp"
+                android:layout_marginBottom="25dp" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/confirm_request_ride"
+                android:background="@drawable/ic_request_btn"
+                android:layout_margin="5dp"
+                android:id="@+id/confirm_request_button"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:alpha="1"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:singleLine="false" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
