@@ -1,0 +1,74 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="0dp"
+    android:gravity="center">
+
+<LinearLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5" >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_weight="5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:weightSum="7.6"
+        android:padding="0dp">
+
+        <Button
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:text="@string/request_ride"
+        android:background="@drawable/ic_request_btn"
+        android:layout_margin="5dp"
+        android:id="@+id/request_button"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:alpha="1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:singleLine="false" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_marker_loc"
+            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="22dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/locate_button"
+            android:background="@drawable/ic_action_locate"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp" />
+    </FrameLayout>
+
+</RelativeLayout>
